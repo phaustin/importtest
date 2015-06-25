@@ -3,67 +3,67 @@
 3) cd ~
 4) Then do:
 
-executing::
+   executing::
   
-   > python ~/repos/importtest/main.py
+     > python ~/repos/importtest/main.py
 
-Produces::
+   Produces::
 
-   -------- inside main program
+     -------- inside main program
 
-   --------------inside function levelB2fun
-   called from module importtest.levelA.levelB.Bgroup
+     --------------inside function levelB2fun
+     called from module importtest.levelA.levelB.Bgroup
 
-   ---------inside function levelA1fun
-   called from module importtest.levelA.Agroup
+     ---------inside function levelA1fun
+     called from module importtest.levelA.Agroup
 
-   ---------exit function levelA1fun
+     ---------exit function levelA1fun
 
-   ---------inside function levelA2fun
-   called from module importtest.levelA.Agroup
+     ---------inside function levelA2fun
+     called from module importtest.levelA.Agroup
 
-   ---------exit function levelA2fun
+     ---------exit function levelA2fun
 
-   --------------inside function levelB1fun
-   called from module importtest.levelA.levelB.Bgroup
+     --------------inside function levelB1fun
+     called from module importtest.levelA.levelB.Bgroup
 
-   --------------exit function levelB1fun
+     --------------exit function levelB1fun
 
-   --------------exit function levelB2fun
+     --------------exit function levelB2fun
 
-   -------- exit main program
+     -------- exit main program
 
 5) Alternatively, you could first add the repos directory to PYTHONPATH::
 
      export PYTHONPATH="/Users/phil/repos"
 
-and then use the -m flag::
+   and then use the -m flag::
 
-  ~ phil@rail% python -m importtest.main
+     ~ phil@rail% python -m importtest.main
 
-which again produces::
+   which again produces::
   
-  -------- inside main program
+     -------- inside main program
 
-  --------------inside function levelB2fun
-  called from module importtest.levelA.levelB.Bgroup
+     --------------inside function levelB2fun
+     called from module importtest.levelA.levelB.Bgroup
 
-  ---------inside function levelA1fun
-  called from module importtest.levelA.Agroup
+     ---------inside function levelA1fun
+     called from module importtest.levelA.Agroup
 
-  ---------exit function levelA1fun
+     ---------exit function levelA1fun
 
-  ---------inside function levelA2fun
-  called from module importtest.levelA.Agroup
+     ---------inside function levelA2fun
+     called from module importtest.levelA.Agroup
 
-  ---------exit function levelA2fun
+     ---------exit function levelA2fun
 
-  --------------inside function levelB1fun
-  called from module importtest.levelA.levelB.Bgroup
+     --------------inside function levelB1fun
+     called from module importtest.levelA.levelB.Bgroup
 
-  --------------exit function levelB1fun
+     --------------exit function levelB1fun
 
-  --------------exit function levelB2fun
+     --------------exit function levelB2fun
 
-  -------- exit main program
+     -------- exit main program
 
