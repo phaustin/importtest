@@ -2,29 +2,33 @@
 2) git clone https://github.com/phaustin/importtest.git importtest
 3) cd ~
 4) Then do:
-   
-> python ~/repos/importtest/main.py
 
--------- inside main program
+executing::
+  
+   > python ~/repos/importtest/main.py
 
---------------inside function levelB2fun
-called from module importtest.levelA.levelB.Bgroup
+Produces::
 
----------inside function levelA1fun
-called from module importtest.levelA.Agroup
+   -------- inside main program
 
----------exit function levelA1fun
+   --------------inside function levelB2fun
+   called from module importtest.levelA.levelB.Bgroup
 
----------inside function levelA2fun
-called from module importtest.levelA.Agroup
+   ---------inside function levelA1fun
+   called from module importtest.levelA.Agroup
 
----------exit function levelA2fun
+   ---------exit function levelA1fun
 
---------------inside function levelB1fun
-called from module importtest.levelA.levelB.Bgroup
+   ---------inside function levelA2fun
+   called from module importtest.levelA.Agroup
 
---------------exit function levelB1fun
+   ---------exit function levelA2fun
 
---------------exit function levelB2fun
+   --------------inside function levelB1fun
+   called from module importtest.levelA.levelB.Bgroup
 
--------- exit main program
+   --------------exit function levelB1fun
+
+   --------------exit function levelB2fun
+
+   -------- exit main program
